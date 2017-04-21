@@ -1,0 +1,2699 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/cjroebuck/restify-validator"
+
+    >restify-validator (v0.3.1)</a>
+</h1>
+<h4>Restify middleware for the validator module.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.restify-validator">module restify-validator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.restify-validator">
+            function <span class="apidocSignatureSpan"></span>restify-validator
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter">
+            function <span class="apidocSignatureSpan">restify-validator.</span>Filter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator">
+            function <span class="apidocSignatureSpan">restify-validator.</span>Validator
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.restify_validator">
+            function <span class="apidocSignatureSpan">restify-validator.</span>restify_validator
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">restify-validator.</span>Filter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">restify-validator.</span>Validator.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.restify-validator.Filter">module restify-validator.Filter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.Filter">
+            function <span class="apidocSignatureSpan">restify-validator.</span>Filter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.restify-validator.Filter.prototype">module restify-validator.Filter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.chain">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>chain
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.convert">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>convert
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.entityDecode">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>entityDecode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.entityEncode">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>entityEncode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.escape">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>escape
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.ifNull">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>ifNull
+            <span class="apidocSignatureSpan">(replace)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.ltrim">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>ltrim
+            <span class="apidocSignatureSpan">(chars)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.modify">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>modify
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.rtrim">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>rtrim
+            <span class="apidocSignatureSpan">(chars)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.sanitize">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>sanitize
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.toBoolean">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>toBoolean
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.toBooleanStrict">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>toBooleanStrict
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.toFloat">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>toFloat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.toInt">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>toInt
+            <span class="apidocSignatureSpan">(radix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.trim">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>trim
+            <span class="apidocSignatureSpan">(chars)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.value">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>value
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.wrap">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>wrap
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Filter.prototype.xss">
+            function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>xss
+            <span class="apidocSignatureSpan">(is_image)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.restify-validator.Validator">module restify-validator.Validator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.Validator">
+            function <span class="apidocSignatureSpan">restify-validator.</span>Validator
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.restify-validator.Validator.prototype">module restify-validator.Validator.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.assert">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>assert
+            <span class="apidocSignatureSpan">(str, fail_msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.check">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>check
+            <span class="apidocSignatureSpan">(str, fail_msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.contains">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>contains
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.equals">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>equals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.error">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>error
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.is">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>is
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isAfter">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isAfter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isAlpha">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isAlpha
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isAlphanumeric">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isAlphanumeric
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isBefore">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isBefore
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isCreditCard">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isCreditCard
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isDate">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isDate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isDecimal">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isDecimal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isDivisibleBy">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isDivisibleBy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isEmail">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isEmail
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isFloat">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isFloat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isHexColor">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isHexColor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isHexadecimal">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isHexadecimal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isIP">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIP
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isIPNet">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIPNet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isIPv4">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIPv4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isIPv6">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIPv6
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isIn">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isInt">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isInt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isLowercase">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isLowercase
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isNull">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isNull
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isNumeric">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isNumeric
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isUUID">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUUID
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isUUIDv3">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUUIDv3
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isUUIDv4">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUUIDv4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isUppercase">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUppercase
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.isUrl">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUrl
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.len">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>len
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.max">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>max
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.min">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>min
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.not">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>not
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.notContains">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notContains
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.notEmpty">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notEmpty
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.notIn">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.notNull">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notNull
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.notRegex">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notRegex
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.regex">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>regex
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.Validator.prototype.validate">
+            function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>validate
+            <span class="apidocSignatureSpan">(str, fail_msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.restify-validator.restify_validator">module restify-validator.restify_validator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.restify_validator.restify_validator">
+            function <span class="apidocSignatureSpan">restify-validator.</span>restify_validator
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.restify_validator.Filter">
+            function <span class="apidocSignatureSpan">restify-validator.restify_validator.</span>Filter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.restify-validator.restify_validator.Validator">
+            function <span class="apidocSignatureSpan">restify-validator.restify_validator.</span>Validator
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.restify-validator" id="apidoc.module.restify-validator">module restify-validator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.restify-validator" id="apidoc.element.restify-validator.restify-validator">
+        function <span class="apidocSignatureSpan"></span>restify-validator
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restify-validator = function (req, res, next) {
+
+  req.updateParam = function(name, value) {
+    // route params like /user/:id
+    if (this.params &#x26;&#x26; this.params.hasOwnProperty(name) &#x26;&#x26;
+        undefined !== this.params[name]) {
+      return this.params[name] = value;
+    }
+    // query string params
+    if (undefined !== this.query[name]) {
+      return this.query[name] = value;
+    }
+    // request body params via connect.bodyParser
+    if (this.body &#x26;&#x26; undefined !== this.body[name]) {
+      return this.body[name] = value;
+    }
+    return false;
+  };
+
+  req.check = function(param, fail_msg) {
+
+    var value;
+
+    // If param is not an array, then split by dot notation
+    // returning an array. It will return an array even if
+    // param doesn&#x27;t have the dot notation.
+    //      &#x27;blogpost&#x27; = [&#x27;blogpost&#x27;]
+    //      &#x27;login.username&#x27; = [&#x27;login&#x27;, &#x27;username&#x27;]
+    // For regex matches you can access the parameters using numbers.
+    if (!Array.isArray(param)) {
+      param = typeof param === &#x27;number&#x27; ?
+              [param] :
+              param.split(&#x27;.&#x27;).filter(function(e){
+                return e !== &#x27;&#x27;;
+              });
+    }
+
+    // Extract value from params
+    param.map(function(item) {
+        if (value === undefined) {
+          value = req.params[item];
+        } else {
+          value = value[item];
+        }
+    });
+    param = param.join(&#x27;.&#x27;);
+
+    validator.error = function(msg) {
+      var error = {
+        param: param,
+        msg: msg,
+        value: value
+      };
+      if (req._validationErrors === undefined) {
+        req._validationErrors = [];
+      }
+      req._validationErrors.push(error);
+
+      if (req.onErrorCallback) {
+        req.onErrorCallback(msg);
+      }
+      return this;
+    }
+    return validator.check(value, fail_msg);
+  };
+
+  req.checkHeader = function(header, fail_msg) {
+    var to_check;
+    if (header === &#x27;referrer&#x27; || header === &#x27;referer&#x27;) {
+      to_check = this.headers.referer;
+    } else {
+      to_check = this.headers[header];
+    }
+    return validator.check(to_check || &#x27;&#x27;, fail_msg);
+  };
+
+  req.onValidationError = function(errback) {
+    req.onErrorCallback = errback;
+  };
+
+  req.validationErrors = function(mapped) {
+    if (req._validationErrors === undefined) {
+      return null;
+    }
+    if (mapped) {
+      var errors = {};
+      req._validationErrors.forEach(function(err) {
+        errors[err.param] = err;
+      });
+      return errors;
+    }
+    return req._validationErrors;
+  }
+
+  req.filter = function(param) {
+    var self = this;
+    var filter = new Filter();
+    filter.modify = function(str) {
+      this.str = str;
+      // Replace the param with the filtered version
+      self.updateParam(param, str);
+    };
+
+    var value;
+
+    if (!Array.isArray(param)) {
+      param = typeof param === &#x27;number&#x27; ?
+              [param] :
+              param.split(&#x27;.&#x27;).filter(function(e){
+                return e !== &#x27;&#x27;;
+              });
+    }
+
+    // Extract value from params
+    param.map(function(item) {
+        if (value === undefined) {
+          value = req.params[item];
+        } else {
+          value = value[item];
+        }
+    });
+
+    return filter.sanitize(value);
+  };
+
+  // Create some aliases - might help with code readability
+  req.sanitize = req.filter;
+  req.assert = req.check;
+  req.validate = req.check;
+
+  return next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter" id="apidoc.element.restify-validator.Filter">
+        function <span class="apidocSignatureSpan">restify-validator.</span>Filter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Filter = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator" id="apidoc.element.restify-validator.Validator">
+        function <span class="apidocSignatureSpan">restify-validator.</span>Validator
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Validator = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.restify_validator" id="apidoc.element.restify-validator.restify_validator">
+        function <span class="apidocSignatureSpan">restify-validator.</span>restify_validator
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restify_validator = function (req, res, next) {
+
+  req.updateParam = function(name, value) {
+    // route params like /user/:id
+    if (this.params &#x26;&#x26; this.params.hasOwnProperty(name) &#x26;&#x26;
+        undefined !== this.params[name]) {
+      return this.params[name] = value;
+    }
+    // query string params
+    if (undefined !== this.query[name]) {
+      return this.query[name] = value;
+    }
+    // request body params via connect.bodyParser
+    if (this.body &#x26;&#x26; undefined !== this.body[name]) {
+      return this.body[name] = value;
+    }
+    return false;
+  };
+
+  req.check = function(param, fail_msg) {
+
+    var value;
+
+    // If param is not an array, then split by dot notation
+    // returning an array. It will return an array even if
+    // param doesn&#x27;t have the dot notation.
+    //      &#x27;blogpost&#x27; = [&#x27;blogpost&#x27;]
+    //      &#x27;login.username&#x27; = [&#x27;login&#x27;, &#x27;username&#x27;]
+    // For regex matches you can access the parameters using numbers.
+    if (!Array.isArray(param)) {
+      param = typeof param === &#x27;number&#x27; ?
+              [param] :
+              param.split(&#x27;.&#x27;).filter(function(e){
+                return e !== &#x27;&#x27;;
+              });
+    }
+
+    // Extract value from params
+    param.map(function(item) {
+        if (value === undefined) {
+          value = req.params[item];
+        } else {
+          value = value[item];
+        }
+    });
+    param = param.join(&#x27;.&#x27;);
+
+    validator.error = function(msg) {
+      var error = {
+        param: param,
+        msg: msg,
+        value: value
+      };
+      if (req._validationErrors === undefined) {
+        req._validationErrors = [];
+      }
+      req._validationErrors.push(error);
+
+      if (req.onErrorCallback) {
+        req.onErrorCallback(msg);
+      }
+      return this;
+    }
+    return validator.check(value, fail_msg);
+  };
+
+  req.checkHeader = function(header, fail_msg) {
+    var to_check;
+    if (header === &#x27;referrer&#x27; || header === &#x27;referer&#x27;) {
+      to_check = this.headers.referer;
+    } else {
+      to_check = this.headers[header];
+    }
+    return validator.check(to_check || &#x27;&#x27;, fail_msg);
+  };
+
+  req.onValidationError = function(errback) {
+    req.onErrorCallback = errback;
+  };
+
+  req.validationErrors = function(mapped) {
+    if (req._validationErrors === undefined) {
+      return null;
+    }
+    if (mapped) {
+      var errors = {};
+      req._validationErrors.forEach(function(err) {
+        errors[err.param] = err;
+      });
+      return errors;
+    }
+    return req._validationErrors;
+  }
+
+  req.filter = function(param) {
+    var self = this;
+    var filter = new Filter();
+    filter.modify = function(str) {
+      this.str = str;
+      // Replace the param with the filtered version
+      self.updateParam(param, str);
+    };
+
+    var value;
+
+    if (!Array.isArray(param)) {
+      param = typeof param === &#x27;number&#x27; ?
+              [param] :
+              param.split(&#x27;.&#x27;).filter(function(e){
+                return e !== &#x27;&#x27;;
+              });
+    }
+
+    // Extract value from params
+    param.map(function(item) {
+        if (value === undefined) {
+          value = req.params[item];
+        } else {
+          value = value[item];
+        }
+    });
+
+    return filter.sanitize(value);
+  };
+
+  // Create some aliases - might help with code readability
+  req.sanitize = req.filter;
+  req.assert = req.check;
+  req.validate = req.check;
+
+  return next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.restify-validator.Filter" id="apidoc.module.restify-validator.Filter">module restify-validator.Filter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.Filter" id="apidoc.element.restify-validator.Filter.Filter">
+        function <span class="apidocSignatureSpan">restify-validator.</span>Filter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Filter = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.restify-validator.Filter.prototype" id="apidoc.module.restify-validator.Filter.prototype">module restify-validator.Filter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.chain" id="apidoc.element.restify-validator.Filter.prototype.chain">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>chain
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chain = function () {
+    this.wrap = function () { return this };
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.convert" id="apidoc.element.restify-validator.Filter.prototype.convert">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>convert
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convert = function (str) {
+    this.str = str == null ? &#x27;&#x27; : str + &#x27;&#x27;;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.entityDecode" id="apidoc.element.restify-validator.Filter.prototype.entityDecode">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>entityDecode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">entityDecode = function () {
+    this.modify(entities.decode(this.str));
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.entityEncode" id="apidoc.element.restify-validator.Filter.prototype.entityEncode">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>entityEncode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">entityEncode = function () {
+    this.modify(entities.encode(this.str));
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.escape" id="apidoc.element.restify-validator.Filter.prototype.escape">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>escape
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escape = function () {
+    this.modify(this.str.replace(/&#x26;/g, &#x27;&#x26;amp;&#x27;)
+                        .replace(/&#x22;/g, &#x27;&#x26;quot;&#x27;)
+                        .replace(/&#x3c;/g, &#x27;&#x26;lt;&#x27;)
+                        .replace(/&#x3e;/g, &#x27;&#x26;gt;&#x27;));
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.ifNull" id="apidoc.element.restify-validator.Filter.prototype.ifNull">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>ifNull
+        <span class="apidocSignatureSpan">(replace)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ifNull = function (replace) {
+    if (!this.str || this.str === &#x27;&#x27;) {
+        this.modify(replace);
+    }
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.ltrim" id="apidoc.element.restify-validator.Filter.prototype.ltrim">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>ltrim
+        <span class="apidocSignatureSpan">(chars)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ltrim = function (chars) {
+    chars = chars || whitespace;
+    this.modify(this.str.replace(new RegExp(&#x27;^[&#x27;+chars+&#x27;]+&#x27;, &#x27;g&#x27;), &#x27;&#x27;));
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.modify" id="apidoc.element.restify-validator.Filter.prototype.modify">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>modify
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">modify = function (str) {
+    this.str = str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.rtrim" id="apidoc.element.restify-validator.Filter.prototype.rtrim">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>rtrim
+        <span class="apidocSignatureSpan">(chars)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rtrim = function (chars) {
+    chars = chars || whitespace;
+    this.modify(this.str.replace(new RegExp(&#x27;[&#x27;+chars+&#x27;]+$&#x27;, &#x27;g&#x27;), &#x27;&#x27;));
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.sanitize" id="apidoc.element.restify-validator.Filter.prototype.sanitize">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>sanitize
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sanitize = function (str) {
+    this.str = str == null ? &#x27;&#x27; : str + &#x27;&#x27;;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.post(&#x27;/:urlparam&#x27;, function(req, res) {
+
+req.assert(&#x27;postparam&#x27;, &#x27;Invalid postparam&#x27;).notEmpty().isInt();
+req.assert(&#x27;getparam&#x27;, &#x27;Invalid getparam&#x27;).isInt();
+req.assert(&#x27;urlparam&#x27;, &#x27;Invalid urlparam&#x27;).isAlpha();
+
+req.<span class="apidocCodeKeywordSpan">sanitize</span>(&#x27;postparam&#x27;).toBoolean();
+
+var errors = req.validationErrors();
+if (errors) {
+  res.send(500 ,&#x27;There have been validation errors: &#x27; + util.inspect(errors));
+  return;
+}
+res.json({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.toBoolean" id="apidoc.element.restify-validator.Filter.prototype.toBoolean">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>toBoolean
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBoolean = function () {
+    if (!this.str || this.str == &#x27;0&#x27; || this.str == &#x27;false&#x27; || this.str == &#x27;&#x27;) {
+        this.modify(false);
+    } else {
+        this.modify(true);
+    }
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.post(&#x27;/:urlparam&#x27;, function(req, res) {
+
+req.assert(&#x27;postparam&#x27;, &#x27;Invalid postparam&#x27;).notEmpty().isInt();
+req.assert(&#x27;getparam&#x27;, &#x27;Invalid getparam&#x27;).isInt();
+req.assert(&#x27;urlparam&#x27;, &#x27;Invalid urlparam&#x27;).isAlpha();
+
+req.sanitize(&#x27;postparam&#x27;).<span class="apidocCodeKeywordSpan">toBoolean</span>();
+
+var errors = req.validationErrors();
+if (errors) {
+  res.send(500 ,&#x27;There have been validation errors: &#x27; + util.inspect(errors));
+  return;
+}
+res.json({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.toBooleanStrict" id="apidoc.element.restify-validator.Filter.prototype.toBooleanStrict">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>toBooleanStrict
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBooleanStrict = function () {
+    if (this.str == &#x27;1&#x27; || this.str == &#x27;true&#x27;) {
+        this.modify(true);
+    } else {
+        this.modify(false);
+    }
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.toFloat" id="apidoc.element.restify-validator.Filter.prototype.toFloat">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>toFloat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toFloat = function () {
+    this.modify(parseFloat(this.str));
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.toInt" id="apidoc.element.restify-validator.Filter.prototype.toInt">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>toInt
+        <span class="apidocSignatureSpan">(radix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toInt = function (radix) {
+    this.modify(parseInt(this.str, radix || 10));
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.trim" id="apidoc.element.restify-validator.Filter.prototype.trim">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>trim
+        <span class="apidocSignatureSpan">(chars)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trim = function (chars) {
+    chars = chars || whitespace;
+    this.modify(this.str.replace(new RegExp(&#x27;^[&#x27;+chars+&#x27;]+|[&#x27;+chars+&#x27;]+$&#x27;, &#x27;g&#x27;), &#x27;&#x27;));
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.value" id="apidoc.element.restify-validator.Filter.prototype.value">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>value
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">value = function () {
+    return this.str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.wrap" id="apidoc.element.restify-validator.Filter.prototype.wrap">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>wrap
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wrap = function (str) {
+    return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Filter.prototype.xss" id="apidoc.element.restify-validator.Filter.prototype.xss">
+        function <span class="apidocSignatureSpan">restify-validator.Filter.prototype.</span>xss
+        <span class="apidocSignatureSpan">(is_image)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xss = function (is_image) {
+    this.modify(xss.clean(this.str, is_image));
+    return this.wrap(this.str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.restify-validator.Validator" id="apidoc.module.restify-validator.Validator">module restify-validator.Validator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.Validator" id="apidoc.element.restify-validator.Validator.Validator">
+        function <span class="apidocSignatureSpan">restify-validator.</span>Validator
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Validator = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.restify-validator.Validator.prototype" id="apidoc.module.restify-validator.Validator.prototype">module restify-validator.Validator.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.assert" id="apidoc.element.restify-validator.Validator.prototype.assert">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>assert
+        <span class="apidocSignatureSpan">(str, fail_msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assert = function (str, fail_msg) {
+    if (typeof str === &#x27;object&#x27; &#x26;&#x26; str !== null &#x26;&#x26; str.toString) {
+        str = str.toString();
+    }
+    this.str = (str == null || (isNaN(str) &#x26;&#x26; str.length == undefined)) ? &#x27;&#x27; : str;
+    if (typeof this.str == &#x27;number&#x27;) {
+        this.str += &#x27;&#x27;;
+    }
+    this.msg = fail_msg;
+    this._errors = this._errors || [];
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.use(restify.bodyParser());
+app.use(restify.queryParser());
+app.use(restifyValidator);
+
+app.post(&#x27;/:urlparam&#x27;, function(req, res) {
+
+req.<span class="apidocCodeKeywordSpan">assert</span>(&#x27;postparam&#x27;, &#x27;Invalid postparam&#x27;).notEmpty().isInt();
+req.assert(&#x27;getparam&#x27;, &#x27;Invalid getparam&#x27;).isInt();
+req.assert(&#x27;urlparam&#x27;, &#x27;Invalid urlparam&#x27;).isAlpha();
+
+req.sanitize(&#x27;postparam&#x27;).toBoolean();
+
+var errors = req.validationErrors();
+if (errors) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.check" id="apidoc.element.restify-validator.Validator.prototype.check">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>check
+        <span class="apidocSignatureSpan">(str, fail_msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">check = function (str, fail_msg) {
+    if (typeof str === &#x27;object&#x27; &#x26;&#x26; str !== null &#x26;&#x26; str.toString) {
+        str = str.toString();
+    }
+    this.str = (str == null || (isNaN(str) &#x26;&#x26; str.length == undefined)) ? &#x27;&#x27; : str;
+    if (typeof this.str == &#x27;number&#x27;) {
+        this.str += &#x27;&#x27;;
+    }
+    this.msg = fail_msg;
+    this._errors = this._errors || [];
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.contains" id="apidoc.element.restify-validator.Validator.prototype.contains">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>contains
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contains = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.equals" id="apidoc.element.restify-validator.Validator.prototype.equals">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>equals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">equals = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.error" id="apidoc.element.restify-validator.Validator.prototype.error">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>error
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (msg) {
+    throw new ValidatorError(msg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.is" id="apidoc.element.restify-validator.Validator.prototype.is">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>is
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">is = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isAfter" id="apidoc.element.restify-validator.Validator.prototype.isAfter">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isAfter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isAfter = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isAlpha" id="apidoc.element.restify-validator.Validator.prototype.isAlpha">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isAlpha
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isAlpha = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+app.use(restify.queryParser());
+app.use(restifyValidator);
+
+app.post(&#x27;/:urlparam&#x27;, function(req, res) {
+
+req.assert(&#x27;postparam&#x27;, &#x27;Invalid postparam&#x27;).notEmpty().isInt();
+req.assert(&#x27;getparam&#x27;, &#x27;Invalid getparam&#x27;).isInt();
+req.assert(&#x27;urlparam&#x27;, &#x27;Invalid urlparam&#x27;).<span class="apidocCodeKeywordSpan">isAlpha</span>();
+
+req.sanitize(&#x27;postparam&#x27;).toBoolean();
+
+var errors = req.validationErrors();
+if (errors) {
+  res.send(500 ,&#x27;There have been validation errors: &#x27; + util.inspect(errors));
+  return;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isAlphanumeric" id="apidoc.element.restify-validator.Validator.prototype.isAlphanumeric">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isAlphanumeric
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isAlphanumeric = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isBefore" id="apidoc.element.restify-validator.Validator.prototype.isBefore">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isBefore
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBefore = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isCreditCard" id="apidoc.element.restify-validator.Validator.prototype.isCreditCard">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isCreditCard
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isCreditCard = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isDate" id="apidoc.element.restify-validator.Validator.prototype.isDate">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isDate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDate = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isDecimal" id="apidoc.element.restify-validator.Validator.prototype.isDecimal">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isDecimal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDecimal = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isDivisibleBy" id="apidoc.element.restify-validator.Validator.prototype.isDivisibleBy">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isDivisibleBy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDivisibleBy = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isEmail" id="apidoc.element.restify-validator.Validator.prototype.isEmail">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isEmail
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEmail = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isFloat" id="apidoc.element.restify-validator.Validator.prototype.isFloat">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isFloat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFloat = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isHexColor" id="apidoc.element.restify-validator.Validator.prototype.isHexColor">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isHexColor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isHexColor = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isHexadecimal" id="apidoc.element.restify-validator.Validator.prototype.isHexadecimal">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isHexadecimal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isHexadecimal = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isIP" id="apidoc.element.restify-validator.Validator.prototype.isIP">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIP
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isIP = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isIPNet" id="apidoc.element.restify-validator.Validator.prototype.isIPNet">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIPNet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isIPNet = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isIPv4" id="apidoc.element.restify-validator.Validator.prototype.isIPv4">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIPv4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isIPv4 = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isIPv6" id="apidoc.element.restify-validator.Validator.prototype.isIPv6">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIPv6
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isIPv6 = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isIn" id="apidoc.element.restify-validator.Validator.prototype.isIn">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isIn = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isInt" id="apidoc.element.restify-validator.Validator.prototype.isInt">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isInt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInt = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.use(restify.bodyParser());
+app.use(restify.queryParser());
+app.use(restifyValidator);
+
+app.post(&#x27;/:urlparam&#x27;, function(req, res) {
+
+req.assert(&#x27;postparam&#x27;, &#x27;Invalid postparam&#x27;).notEmpty().<span class="apidocCodeKeywordSpan">isInt</span>();
+req.assert(&#x27;getparam&#x27;, &#x27;Invalid getparam&#x27;).isInt();
+req.assert(&#x27;urlparam&#x27;, &#x27;Invalid urlparam&#x27;).isAlpha();
+
+req.sanitize(&#x27;postparam&#x27;).toBoolean();
+
+var errors = req.validationErrors();
+if (errors) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isLowercase" id="apidoc.element.restify-validator.Validator.prototype.isLowercase">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isLowercase
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLowercase = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isNull" id="apidoc.element.restify-validator.Validator.prototype.isNull">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isNull
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNull = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isNumeric" id="apidoc.element.restify-validator.Validator.prototype.isNumeric">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isNumeric
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isNumeric = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isUUID" id="apidoc.element.restify-validator.Validator.prototype.isUUID">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUUID
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUUID = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isUUIDv3" id="apidoc.element.restify-validator.Validator.prototype.isUUIDv3">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUUIDv3
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUUIDv3 = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isUUIDv4" id="apidoc.element.restify-validator.Validator.prototype.isUUIDv4">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUUIDv4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUUIDv4 = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isUppercase" id="apidoc.element.restify-validator.Validator.prototype.isUppercase">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUppercase
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUppercase = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.isUrl" id="apidoc.element.restify-validator.Validator.prototype.isUrl">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>isUrl
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isUrl = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.len" id="apidoc.element.restify-validator.Validator.prototype.len">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>len
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">len = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.max" id="apidoc.element.restify-validator.Validator.prototype.max">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>max
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">max = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.min" id="apidoc.element.restify-validator.Validator.prototype.min">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>min
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">min = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.not" id="apidoc.element.restify-validator.Validator.prototype.not">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>not
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">not = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.notContains" id="apidoc.element.restify-validator.Validator.prototype.notContains">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notContains
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notContains = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.notEmpty" id="apidoc.element.restify-validator.Validator.prototype.notEmpty">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notEmpty
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notEmpty = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.use(restify.bodyParser());
+app.use(restify.queryParser());
+app.use(restifyValidator);
+
+app.post(&#x27;/:urlparam&#x27;, function(req, res) {
+
+req.assert(&#x27;postparam&#x27;, &#x27;Invalid postparam&#x27;).<span class="apidocCodeKeywordSpan">notEmpty</span>().isInt();
+req.assert(&#x27;getparam&#x27;, &#x27;Invalid getparam&#x27;).isInt();
+req.assert(&#x27;urlparam&#x27;, &#x27;Invalid urlparam&#x27;).isAlpha();
+
+req.sanitize(&#x27;postparam&#x27;).toBoolean();
+
+var errors = req.validationErrors();
+if (errors) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.notIn" id="apidoc.element.restify-validator.Validator.prototype.notIn">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notIn = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.notNull" id="apidoc.element.restify-validator.Validator.prototype.notNull">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notNull
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notNull = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.notRegex" id="apidoc.element.restify-validator.Validator.prototype.notRegex">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>notRegex
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notRegex = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.regex" id="apidoc.element.restify-validator.Validator.prototype.regex">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>regex
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">regex = function () {
+    var args = Array.prototype.slice.call(arguments);
+    args.unshift(this.str);
+    if(!validators[key].apply(this, args)) {
+        var msg = this.msg || exports.defaultError[key];
+        if (typeof msg === &#x27;string&#x27;) {
+            args.forEach(function(arg, i) { msg = msg.replace(&#x27;%&#x27;+i, arg); });
+        }
+        return this.error(msg);
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.Validator.prototype.validate" id="apidoc.element.restify-validator.Validator.prototype.validate">
+        function <span class="apidocSignatureSpan">restify-validator.Validator.prototype.</span>validate
+        <span class="apidocSignatureSpan">(str, fail_msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validate = function (str, fail_msg) {
+    if (typeof str === &#x27;object&#x27; &#x26;&#x26; str !== null &#x26;&#x26; str.toString) {
+        str = str.toString();
+    }
+    this.str = (str == null || (isNaN(str) &#x26;&#x26; str.length == undefined)) ? &#x27;&#x27; : str;
+    if (typeof this.str == &#x27;number&#x27;) {
+        this.str += &#x27;&#x27;;
+    }
+    this.msg = fail_msg;
+    this._errors = this._errors || [];
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.restify-validator.restify_validator" id="apidoc.module.restify-validator.restify_validator">module restify-validator.restify_validator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.restify_validator.restify_validator" id="apidoc.element.restify-validator.restify_validator.restify_validator">
+        function <span class="apidocSignatureSpan">restify-validator.</span>restify_validator
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restify_validator = function (req, res, next) {
+
+  req.updateParam = function(name, value) {
+    // route params like /user/:id
+    if (this.params &#x26;&#x26; this.params.hasOwnProperty(name) &#x26;&#x26;
+        undefined !== this.params[name]) {
+      return this.params[name] = value;
+    }
+    // query string params
+    if (undefined !== this.query[name]) {
+      return this.query[name] = value;
+    }
+    // request body params via connect.bodyParser
+    if (this.body &#x26;&#x26; undefined !== this.body[name]) {
+      return this.body[name] = value;
+    }
+    return false;
+  };
+
+  req.check = function(param, fail_msg) {
+
+    var value;
+
+    // If param is not an array, then split by dot notation
+    // returning an array. It will return an array even if
+    // param doesn&#x27;t have the dot notation.
+    //      &#x27;blogpost&#x27; = [&#x27;blogpost&#x27;]
+    //      &#x27;login.username&#x27; = [&#x27;login&#x27;, &#x27;username&#x27;]
+    // For regex matches you can access the parameters using numbers.
+    if (!Array.isArray(param)) {
+      param = typeof param === &#x27;number&#x27; ?
+              [param] :
+              param.split(&#x27;.&#x27;).filter(function(e){
+                return e !== &#x27;&#x27;;
+              });
+    }
+
+    // Extract value from params
+    param.map(function(item) {
+        if (value === undefined) {
+          value = req.params[item];
+        } else {
+          value = value[item];
+        }
+    });
+    param = param.join(&#x27;.&#x27;);
+
+    validator.error = function(msg) {
+      var error = {
+        param: param,
+        msg: msg,
+        value: value
+      };
+      if (req._validationErrors === undefined) {
+        req._validationErrors = [];
+      }
+      req._validationErrors.push(error);
+
+      if (req.onErrorCallback) {
+        req.onErrorCallback(msg);
+      }
+      return this;
+    }
+    return validator.check(value, fail_msg);
+  };
+
+  req.checkHeader = function(header, fail_msg) {
+    var to_check;
+    if (header === &#x27;referrer&#x27; || header === &#x27;referer&#x27;) {
+      to_check = this.headers.referer;
+    } else {
+      to_check = this.headers[header];
+    }
+    return validator.check(to_check || &#x27;&#x27;, fail_msg);
+  };
+
+  req.onValidationError = function(errback) {
+    req.onErrorCallback = errback;
+  };
+
+  req.validationErrors = function(mapped) {
+    if (req._validationErrors === undefined) {
+      return null;
+    }
+    if (mapped) {
+      var errors = {};
+      req._validationErrors.forEach(function(err) {
+        errors[err.param] = err;
+      });
+      return errors;
+    }
+    return req._validationErrors;
+  }
+
+  req.filter = function(param) {
+    var self = this;
+    var filter = new Filter();
+    filter.modify = function(str) {
+      this.str = str;
+      // Replace the param with the filtered version
+      self.updateParam(param, str);
+    };
+
+    var value;
+
+    if (!Array.isArray(param)) {
+      param = typeof param === &#x27;number&#x27; ?
+              [param] :
+              param.split(&#x27;.&#x27;).filter(function(e){
+                return e !== &#x27;&#x27;;
+              });
+    }
+
+    // Extract value from params
+    param.map(function(item) {
+        if (value === undefined) {
+          value = req.params[item];
+        } else {
+          value = value[item];
+        }
+    });
+
+    return filter.sanitize(value);
+  };
+
+  // Create some aliases - might help with code readability
+  req.sanitize = req.filter;
+  req.assert = req.check;
+  req.validate = req.check;
+
+  return next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.restify_validator.Filter" id="apidoc.element.restify-validator.restify_validator.Filter">
+        function <span class="apidocSignatureSpan">restify-validator.restify_validator.</span>Filter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Filter = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.restify-validator.restify_validator.Validator" id="apidoc.element.restify-validator.restify_validator.Validator">
+        function <span class="apidocSignatureSpan">restify-validator.restify_validator.</span>Validator
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Validator = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
